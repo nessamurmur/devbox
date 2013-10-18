@@ -9,6 +9,8 @@
 (column-number-mode t)
 (add-to-list 'load-path "~/.emacs.d/utils/")
 (global-linum-mode t)
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
 
 ;; Markdown Mode
 (autoload 'markdown-mode "markdown-mode"
