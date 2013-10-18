@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/nifty/Google Drive/code/trail'
-let g:netrw_dirhist_2='/Users/nifty/Google Drive/code/scripts'
-let g:netrw_dirhist_3='/Users/nifty/Google Drive/code/trail'
-let g:netrw_dirhist_4='/Users/nifty/Google Drive/code/trail/app/views/devise/passwords'
-let g:netrw_dirhist_5='/Users/nifty/Google Drive/code/trail/app/views/devise'
-let g:netrw_dirhist_6='/Users/nifty/Google Drive/code/trail/app/views/devise/unlocks'
-let g:netrw_dirhist_7='/Users/nifty/Google Drive/code/trail'
