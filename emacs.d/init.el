@@ -19,6 +19,11 @@
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
+;; Elixir Mode
+(add-to-list 'load-path "~/.emacs.d/emacs-elixir/")
+(require 'elixir-mode)
+
+
 ;; YAML Mode
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
