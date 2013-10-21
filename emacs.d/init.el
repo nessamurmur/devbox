@@ -19,6 +19,13 @@
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
+;; Ruby Flymake
+(add-to-list 'load-path "~/.emacs.d/ruby/")
+(require 'flymake-easy)
+(require 'flymake-ruby)
+(add-hook 'ruby-mode-hook 'flymake-ruby-load)
+
+
 ;; Elixir Mode
 (add-to-list 'load-path "~/.emacs.d/emacs-elixir/")
 (require 'elixir-mode)
