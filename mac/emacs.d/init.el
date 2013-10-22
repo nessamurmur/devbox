@@ -7,10 +7,16 @@
 (blink-cursor-mode t)
 (show-paren-mode t)
 (column-number-mode t)
-(add-to-list 'load-path "~/.emacs.d/utils/")
 (global-linum-mode t)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
+
+;; Load path additions
+(add-to-list 'load-path "~/.emacs.d/web/")
+(add-to-list 'load-path "~/.emacs.d/utils/")
+(add-to-list 'load-path "~/.emacs.d/ruby/")
+(add-to-list 'load-path "~/.emacs.d/emacs-elixir/")
+(add-to-list 'load-path "~/.emacs.d/coffeescript")
 
 ;; Markdown Mode
 (autoload 'markdown-mode "markdown-mode"
@@ -20,14 +26,13 @@
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 ;; Ruby Flymake
-(add-to-list 'load-path "~/.emacs.d/ruby/")
+(require 'flymake)
 (require 'flymake-easy)
 (require 'flymake-ruby)
+(eval-after-load 'flymake '(require 'flymake-cursor))
 (add-hook 'ruby-mode-hook 'flymake-ruby-load)
 
-
 ;; Elixir Mode
-(add-to-list 'load-path "~/.emacs.d/emacs-elixir/")
 (require 'elixir-mode)
 
 ;; Erlang Mode
@@ -43,7 +48,6 @@
   '(lambda ()
    (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
-
 ;; UTF-8 Encoding
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
@@ -53,7 +57,8 @@
 (setq mac-option-key-is-meta t)
 (set-keyboard-coding-system nil)
 
-;; Web-mode
+;; Web Related stuff
+(require 'css-mode)
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
@@ -65,8 +70,9 @@
 (add-to-list 'auto-mode-alist '("\\.eco\\'" . web-mode))
 
 ;; CoffeeScript
-(add-to-list 'load-path "~/.emacs.d/coffeescript")
 (require 'coffee-mode "coffee-mode")
+(require 'flymake-coffee)
+(add-hook 'coffee-mode-hook 'flymake-coffee-load)
 
 ;; Interactively Do Things
 (require 'ido)
@@ -76,6 +82,8 @@
 (add-to-list 'load-path "~/.emacs.d/rinari")
 (require 'rinari)
 
+;; Git Commit mode
+(require 'git-commit)
 
 ;; Fancy Tab
 (defun fancy-tab (arg)
