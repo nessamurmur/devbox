@@ -57,7 +57,8 @@
 (setq mac-option-key-is-meta t)
 (set-keyboard-coding-system nil)
 
-;; Web-mode
+;; Web Related stuff
+(require 'css-mode)
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
@@ -69,8 +70,9 @@
 (add-to-list 'auto-mode-alist '("\\.eco\\'" . web-mode))
 
 ;; CoffeeScript
-(add-to-list 'load-path "~/.emacs.d/coffeescript")
 (require 'coffee-mode "coffee-mode")
+(require 'flymake-coffee)
+(add-hook 'coffee-mode-hook 'flymake-coffee-load)
 
 ;; Interactively Do Things
 (require 'ido)
@@ -80,6 +82,8 @@
 (add-to-list 'load-path "~/.emacs.d/rinari")
 (require 'rinari)
 
+;; Git Commit mode
+(require 'git-commit)
 
 ;; Fancy Tab
 (defun fancy-tab (arg)
