@@ -7,10 +7,16 @@
 (blink-cursor-mode t)
 (show-paren-mode t)
 (column-number-mode t)
-(add-to-list 'load-path "~/.emacs.d/utils/")
 (global-linum-mode t)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
+
+;; Load path additions
+(add-to-list 'load-path "~/.emacs.d/web/")
+(add-to-list 'load-path "~/.emacs.d/utils/")
+(add-to-list 'load-path "~/.emacs.d/ruby/")
+(add-to-list 'load-path "~/.emacs.d/emacs-elixir/")
+(add-to-list 'load-path "~/.emacs.d/coffeescript")
 
 ;; Markdown Mode
 (autoload 'markdown-mode "markdown-mode"
