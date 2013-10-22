@@ -48,16 +48,14 @@ plugins=(zsh-syntax-highlighting git hub osx npm node bundler rspec rails3 brew 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export EDITOR="/usr/bin/emacs"
+export EDITOR="/usr/bin/emacs -nw"
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:
 
+export PATH=$PATH:/home/nifty/source/elixir/bin
+
 # RVM
 source /home/nifty/.rvm/scripts/rvm
-
-# Elixer ENV
-export PATH="$HOME/.exenv/bin:$PATH"
-eval "$(exenv init -)"
 
 # RVM Path
 export PATH=/.rvm/bin:$PATH # Add RVM to PATH for scripting
