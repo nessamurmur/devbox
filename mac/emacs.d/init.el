@@ -26,14 +26,13 @@
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 ;; Ruby Flymake
-(add-to-list 'load-path "~/.emacs.d/ruby/")
+(require 'flymake)
 (require 'flymake-easy)
 (require 'flymake-ruby)
+(eval-after-load 'flymake '(require 'flymake-cursor))
 (add-hook 'ruby-mode-hook 'flymake-ruby-load)
 
-
 ;; Elixir Mode
-(add-to-list 'load-path "~/.emacs.d/emacs-elixir/")
 (require 'elixir-mode)
 
 ;; Erlang Mode
@@ -48,7 +47,6 @@
 (add-hook 'yaml-mode-hook
   '(lambda ()
    (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
-
 
 ;; UTF-8 Encoding
 (set-terminal-coding-system 'utf-8)
