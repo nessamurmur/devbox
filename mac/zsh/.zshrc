@@ -12,6 +12,8 @@ alias zshconfig="emacs ~/.zshrc"
 
 alias ohmyzsh="emacs ~/.oh-my-zsh"
 
+alias clean_merged_branches="git checkout master; git branch -a --merged | grep -v 'master$' | grep -v 'remotes/.*' | xargs git branch -D"
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
