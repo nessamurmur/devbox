@@ -45,7 +45,7 @@ alias clean_merged_branches="git checkout master; git branch -a --merged | grep 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(zsh-syntax-highlighting git hub osx npm node bundler rspec rails3 brew rvm rbenv ruby sublime gem heroku)
+plugins=(zsh-syntax-highlighting git hub npm node rspec rails4 brew rvm ruby gem heroku)
 
 source $ZSH/oh-my-zsh.sh
 
