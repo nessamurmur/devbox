@@ -11,12 +11,29 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
 
+;; Theme
+(require 'color-theme)
+(setq color-theme-is-global t)
+(color-theme-initialize)
+(color-theme-classic)
+
 ;; Load path additions
 (add-to-list 'load-path "~/.emacs.d/web/")
 (add-to-list 'load-path "~/.emacs.d/utils/")
 (add-to-list 'load-path "~/.emacs.d/ruby/")
 (add-to-list 'load-path "~/.emacs.d/emacs-elixir/")
 (add-to-list 'load-path "~/.emacs.d/coffeescript")
+
+;; Whitespace
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+(add-hook 'before-save-hook 'whitespace-cleanup)
+
+;; Marmalade stuff
+(require 'package)
+(add-to-list 'package-archives
+    '("marmalade" .
+      "http://marmalade-repo.org/packages/"))
+(package-initialize)
 
 ;; Markdown Mode
 (autoload 'markdown-mode "markdown-mode"
@@ -25,12 +42,20 @@
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
+;; Ruby Stuffs
+(add-to-list 'auto-mode-alist '("\\Gemfile\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.rake\\'" . ruby-mode))
+
+;; Haml mode
+(require 'haml-mode)
+
 ;; Ruby Flymake
 (require 'flymake)
 (require 'flymake-easy)
 (require 'flymake-ruby)
 (eval-after-load 'flymake '(require 'flymake-cursor))
 (add-hook 'ruby-mode-hook 'flymake-ruby-load)
+(require 'feature-mode)
 
 ;; Elixir Mode
 (require 'elixir-mode)
@@ -50,6 +75,7 @@
 ;; Web Related stuff
 (require 'css-mode)
 (require 'web-mode)
+(require 'php-mode)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
@@ -81,8 +107,8 @@
   (setq this-command last-command)
   (if (or (eq this-command 'hippie-expand) (looking-at "\\_>"))
       (progn
-	(setq this-command 'hippie-expand)
-	(hippie-expand arg))
+  (setq this-command 'hippie-expand)
+  (hippie-expand arg))
     (setq this-command 'indent-for-tab-command)
     (indent-for-tab-command arg)))
 
