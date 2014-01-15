@@ -20,7 +20,7 @@
 (add-to-list 'load-path "~/.emacs.d/coffeescript")
 
 ; Color Theme
-(add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0/")
+(add-to-list 'load-path "~/.emacs.d/color-theme/")
 (require 'color-theme)
 (eval-after-load "color-theme"
   '(progn
