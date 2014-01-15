@@ -7,6 +7,9 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="kardan"
 
+# JRUBY
+JRUBY_OPTS=--1.9
+
 # Aliases
 alias zshconfig="emacs ~/.zshrc"
 
@@ -15,6 +18,20 @@ alias ohmyzsh="emacs ~/.oh-my-zsh"
 alias emacs="emacs -nw"
 
 alias clean_merged_branches="git checkout master; git branch -a --merged | grep -v 'master$' | grep -v 'remotes/.*' | xargs git branch -D"
+
+alias doit="hack && rake && ship"
+
+alias ssh_aws="ssh -i ~/.ssh/ubuntu.pem ubuntu@ec2-54-202-202-86.us-west-2.compute.amazonaws.com"
+
+alias cuke="cucumber"
+
+alias very="git"
+
+alias much="git"
+
+alias wow="git status"
+
+alias fuck-vagrant="vagrant halt && vagrant destroy -f"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -45,22 +62,27 @@ alias clean_merged_branches="git checkout master; git branch -a --merged | grep 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(zsh-syntax-highlighting git hub npm node rspec rails4 brew rvm ruby gem heroku)
+plugins=(zsh-syntax-highlighting git npm node bundler rspec rails brew chruby ruby-install ruby gem heroku aws)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export EDITOR="/usr/bin/emacs -nw"
 
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/share/elasticsearch/bin
 
+# Elixir
 export PATH=$PATH:/home/nifty/source/elixir/bin
 
-# RVM
-source /home/nifty/.rvm/scripts/rvm
+# LFE
+export PATH=$PATH:/home/nifty/source/lfe/bin
 
-# RVM Path
-export PATH=/.rvm/bin:$PATH # Add RVM to PATH for scripting
-export PATH=/Users/nifty/.rvm:$PATH
+# RSense
+PATH=$PATH:/opt/rsense-0.3/bin/
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# chruby
+export DEFAULT_RUBY=ruby-2.1.0
+
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+chruby ${DEFAULT_RUBY}
