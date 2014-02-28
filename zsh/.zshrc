@@ -71,9 +71,6 @@ export EDITOR="/usr/bin/emacs -nw"
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/share/elasticsearch/bin
 
-# Elixir
-export PATH=$PATH:/home/nifty/source/elixir/bin
-
 # LFE
 export PATH=$PATH:/home/nifty/source/lfe/bin
 
