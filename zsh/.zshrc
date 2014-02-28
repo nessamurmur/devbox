@@ -81,7 +81,7 @@ export PATH=$PATH:/home/nifty/source/lfe/bin
 PATH=$PATH:/opt/rsense-0.3/bin/
 
 # chruby
-export DEFAULT_RUBY=ruby-2.1.0
+export DEFAULT_RUBY=2.1.1
 
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
