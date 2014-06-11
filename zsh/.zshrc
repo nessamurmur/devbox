@@ -37,6 +37,9 @@ git_prompt_info() {
   fi
 }
 
+# Syntax highlighting
+source ~/dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # JRUBY
 JRUBY_OPTS=--1.9
 
