@@ -1,3 +1,5 @@
+export SHELL=/bin/zsh
+
 source ~/dotfiles/zshuery/zshuery.sh
 load_defaults
 load_aliases
