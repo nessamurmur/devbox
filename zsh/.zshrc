@@ -77,3 +77,7 @@ export EDITOR="/usr/bin/emacs -nw"
 # RBENV
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# Exenv
+export PATH="$HOME/.exenv/bin:$PATH"
+eval "$(exenv init -)"
