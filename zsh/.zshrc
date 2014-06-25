@@ -33,8 +33,6 @@ alias emacs="emacs -nw"
 
 alias clean_merged_branches="git checkout master; git branch -a --merged | grep -v 'master$' | grep -v 'remotes/.*' | xargs git branch -D"
 
-alias doit="hack && rake && ship"
-
 alias cuke="cucumber"
 
 alias very="git"
@@ -44,8 +42,6 @@ alias much="git"
 alias wow="git status"
 
 alias ack=ack-grep
-
-alias fuck-vagrant="vagrant halt && vagrant destroy -f"
 
 export EDITOR="/usr/bin/emacs -nw"
 
