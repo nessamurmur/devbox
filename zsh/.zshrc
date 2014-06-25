@@ -7,11 +7,18 @@ load_lol_aliases
 load_completion ~/dotfiles/zshuery/completion
 load_correction
 
-prompts '%{$fg[yellow]%}╭─ %{$reset_color%}%{$fg[magenta]%}%n%{$reset_color%}@%{$fg[yellow]%}%m%{$reset_color%} in %{$fg_bold[green]%}$(COLLAPSED_DIR)%{$reset_color%}$(virtualenv_info) %{$fg[red]%}$(ruby_version)%{$reset_color%}
+prompts '%{$fg[yellow]%}╭─ %{$reset_color%}%{$fg[magenta]%}%n%{$reset_color%}@%{$fg[yellow]%}%m%{$reset_color%} in %{$fg_bold[green]%}$(COLLAPSED_DIR)%{$reset_color%}$(virtualenv_info) %{$fg[blue]%}$(current_branch) %{$fg[red]%}$(ruby_version)%{$reset_color%}
 %{$fg[yellow]%}╰─>%{$reset_color%} '
 
 chpwd() {
     update_terminal_cwd
+}
+
+# Current branch
+current_branch() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || \
+  ref=$(git rev-parse --short HEAD 2> /dev/null) || return
+  echo ${ref#refs/heads/}
 }
 
 # Bind CTRL-L CTRL-R to backword/forward word
