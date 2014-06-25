@@ -39,6 +39,10 @@ git_prompt_info() {
   fi
 }
 
+# Bind CTRL-L CTRL-R to backword/forward word
+bindkey ';5D' emacs-backward-word
+bindkey ';5C' emacs-forward-word
+
 # Syntax highlighting
 source ~/dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
