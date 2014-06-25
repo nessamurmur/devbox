@@ -45,6 +45,13 @@ alias ack=ack-grep
 
 export EDITOR="/usr/bin/emacs -nw"
 
+# git aliases
+alias gitl="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+
+alias gits="git status -sb"
+
+alias gitd="git diff"
+
 # RBENV
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
