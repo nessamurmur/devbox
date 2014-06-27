@@ -50,6 +50,8 @@ alias wow="git status"
 
 alias ack=ack-grep
 
+alias be="bundle exec"
+
 export EDITOR="/usr/bin/emacs -nw"
 
 # git aliases
