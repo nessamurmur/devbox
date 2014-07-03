@@ -63,6 +63,8 @@ alias gitd="git diff"
 
 alias binst="bundle install -j4"
 
+alias gitco="git checkout"
+
 # RBENV
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
