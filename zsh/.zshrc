@@ -8,7 +8,7 @@ load_completion ~/dotfiles/zshuery/completion
 load_correction
 
 prompts '%{$fg[yellow]%}╭─ %{$reset_color%}%{$fg[magenta]%}%n%{$reset_color%}@%{$fg[yellow]%}%m%{$reset_color%} in %{$fg_bold[green]%}$(COLLAPSED_DIR)%{$reset_color%}$(virtualenv_info) %{$fg[blue]%}$(current_branch) %{$fg[red]%}$(ruby_version)%{$reset_color%}
-%{$fg[yellow]%}╰─>%{$reset_color%} '
+%{$fg[yellow]%}╰─> λ %{$reset_color%} '
 
 chpwd() {
     update_terminal_cwd
