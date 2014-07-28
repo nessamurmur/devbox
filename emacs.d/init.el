@@ -107,10 +107,6 @@
 (require 'ido)
 (ido-mode t)
 
-;; Rinari (Rails Minor Mode)
-(add-to-list 'load-path "~/.emacs.d/rinari")
-(require 'rinari)
-
 ;; Git Commit mode
 (require 'git-commit)
 
