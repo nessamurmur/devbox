@@ -4,8 +4,8 @@ install:
 	chsh -s /bin/zsh
 
 	# Prezto
-	zsh -c 'git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"'
-	zsh -c 'setopt EXTENDED_GLOB; for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"; done'
+	git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
+	setopt EXTENDED_GLOB; for rcfile in ~/.zprezto/runcoms/^README.md(.N); do ln -s "$rcfile" "~/.${rcfile:t}"; done
 
 	# Emacs Prelude
 	curl -L http://git.io/epre | sh
