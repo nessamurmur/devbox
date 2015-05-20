@@ -1,6 +1,6 @@
 install:
 	echo "Installing some stuff..."
-	sudo apt-get install -y build-essential emacs zsh
+	sudo apt-get install -y build-essential emacs zsh git
 	sudo chsh -s /bin/zsh
 
 	# Prezto
