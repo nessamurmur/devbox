@@ -1,12 +1,11 @@
 install:
 	echo "Installing some stuff..."
 	sudo apt-get install -y build-essential emacs zsh git
-	sudo chsh -s /bin/zsh
+	chsh -s /bin/zsh
 
 	# Prezto
-	git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-	setopt EXTENDED_GLOB
-	for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"; done
+	zsh -c 'git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"'
+	zsh -c 'setopt EXTENDED_GLOB; for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"; done'
 
 	# Emacs Prelude
 	curl -L http://git.io/epre | sh
