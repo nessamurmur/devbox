@@ -9,62 +9,12 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 # JRUBY
 export JRUBY_OPTS=--2.0
 
-# RBENV
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-# Exenv
-#export PATH="$HOME/.exenv/bin:$PATH"
-#eval "$(exenv init -)"
-
-# NVM
-export NVM_DIR="/home/nifty/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-nvm use stable > /dev/null
-
-# Android Studio
-export PATH=$PATH:/home/nifty/code/android-studio/bin
-
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/home/nifty/.gvm/bin/gvm-init.sh" ]] && source "/home/nifty/.gvm/bin/gvm-init.sh"
-
 # PATH STUFF
 export PATH=$PATH:/home/nifty/bin
 
 # NIMBLE
 export PATH=$PATH:/home/nifty/.nimble/bin
 
-# GRADLE
-export PATH=$PATH:/home/nifty/code/gradle-2.2.1/bin
-
-# ACTIVATOR
-export PATH=$PATH:/home/nifty/code/activator-1.2.12
-
-export JAVA_HOME=/usr/lib/jvm/java-7-oracle
-[ -s "/home/nifty/.k/kvm/kvm.sh" ] && . "/home/nifty/.k/kvm/kvm.sh" # Load kvm
-
-[ -s "/home/nifty/.dnx/dnvm/dnvm.sh" ] && . "/home/nifty/.dnx/dnvm/dnvm.sh" # Load dnvm
-
-# CABAL
-export PATH=$HOME/.cabal/bin:$PATH
-
-# ANSIBLE
-
-export ANSIBLE_NOCOWS=1
-
 # HOMEBREW
 
 export PATH=$PATH:/home/nifty/.linuxbrew/bin
-
-# PIP
-
-export PATH=$PATH:/home/nifty/.local/bin
-
-# AUTOENV
-
-source ~/.autoenv/activate.sh
-
-# VIRTUALENV WRAPPER
-
-export WORKON_HOME=~/Envs
-source ~/.local/bin/virtualenvwrapper.sh
