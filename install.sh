@@ -1,10 +1,10 @@
 echo "Installing some stuff..."
-sudo apt-get update && sudo apt-get install -y build-essential emacs zsh git
+sudo apt-get update && sudo apt-get install -y build-essential emacs zsh git curl
 chsh -s /bin/zsh
 
 # Prezto
 git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
-zsh -c "setopt EXTENDED_GLOB; for rcfile in ~/.zprezto/runcoms/^README.md(.N); do ln -s "$rcfile" "~/.${rcfile}"; done"
+for rcfile in ~/.zprezto/runcoms/*; do ln -s "$rcfile" "~/.${rcfile}"; done; rm ~/.README.md
 
 # Emacs Prelude
 curl -L http://git.io/epre | sh
