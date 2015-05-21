@@ -14,12 +14,14 @@ cd ~/dotfiles
 curl -L http://git.io/epre | sh
 
 echo "Copying Files"
-cp -r zsh/.zshrc ~
-cp -r zsh/.zpreztorc ~
-cp -r git/.gitconfig ~
-cp -r git/.gitignore ~
+cp zsh/.zshrc ~
+cp zsh/.zpreztorc ~
+cp zsh/.aliases ~
+cp zsh/.exports ~
+cp git/.gitconfig ~
+cp git/.gitignore ~
 mkdir -p ~/.lein
-cp -r lein/* ~/.lein
+cp -r -lein/* ~/.lein
 echo "(setq mode-require-final-newline nil)" >> ~/.emacs.d/personal/preload/whitespace.el
 echo "(add-hook 'before-save-hook 'delete-trailing-whitespace)" >> ~/.emacs.d/personal/preload/whitespace.el
 echo "Done"
