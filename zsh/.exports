@@ -1,5 +1,6 @@
 export SHELL=/bin/zsh
 export TERM=xterm-256color
+export PATH=$PATH:/usr/local/bin/express
 
 # GO
 export GOROOT=/usr/lib/go
