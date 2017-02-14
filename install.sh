@@ -21,7 +21,6 @@ cp zsh/.exports ~
 cp git/.gitconfig ~
 cp git/.gitignore ~
 mkdir -p ~/.lein
-cp -r -lein/* ~/.lein
-echo "(setq mode-require-final-newline nil)" >> ~/.emacs.d/personal/preload/whitespace.el
-echo "(add-hook 'before-save-hook 'delete-trailing-whitespace)" >> ~/.emacs.d/personal/preload/whitespace.el
+echo "(setq mode-require-final-newline nil)" >> ~/.emacs.d/personal/whitespace.el
+echo "(add-hook 'before-save-hook 'delete-trailing-whitespace)" >> ~/.emacs.d/personal/whitespace.el
 echo "Done"
