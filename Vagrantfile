@@ -7,5 +7,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
     cd /vagrant
     ./install.sh
+    ssh-keygen -t rsa -C nessa.murmur@gmail.com -N ""
   SHELL
 end
