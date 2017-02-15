@@ -1,5 +1,6 @@
 echo "Installing some stuff..."
-sudo apt-get update && sudo apt-get install -y build-essential emacs zsh git curl
+sudo apt-get update && sudo apt-get install -y build-essential emacs zsh git \
+                            curl ack-grep python-setuptools
 chsh -s /bin/zsh
 
 # Prezto
