@@ -10,5 +10,6 @@ for rcfile in ~/.zprezto/runcoms/*; do ln -s "$rcfile" "~/.${rcfile}"; done; rm 
 curl -L http://git.io/epre | sh
 
 echo "(setq mode-require-final-newline nil)" >> ~/.emacs.d/personal/whitespace.el
+echo "(setq mode-require-final-newline 't)" >> ~/.emacs.d/personal/whitespace.el
 echo "(add-hook 'before-save-hook 'delete-trailing-whitespace)" >> ~/.emacs.d/personal/whitespace.el
 echo "Done"
