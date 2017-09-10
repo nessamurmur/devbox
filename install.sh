@@ -3,7 +3,7 @@ sudo apt-get update && sudo apt-get install -y build-essential emacs zsh git cur
 chsh -s /bin/zsh
 
 echo "Installing Ruby dependencies"
-apt-get install -y gcc-6 autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm3 libgdbm-dev
+sudo apt-get install -y gcc-6 autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm3 libgdbm-dev
 
 # Prezto
 git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
