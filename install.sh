@@ -17,4 +17,5 @@ cp -r ./git/.* ~
 
 echo "(setq mode-require-final-newline 't)" >> ~/.emacs.d/personal/whitespace.el
 echo "(add-hook 'before-save-hook 'delete-trailing-whitespace)" >> ~/.emacs.d/personal/whitespace.el
+echo "(setq js-indent-level 2)" >> ~/.emacs.d/personal/whitespace.el
 echo "Done"
