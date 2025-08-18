@@ -1,6 +1,10 @@
+chsh -s /bin/zsh
+
 echo "Installing some stuff..."
 sudo pacman -S emacs
-chsh -s /bin/zsh
+
+# ruby-build pre-reqs
+sudo pacman -S --needed base-devel rust libffi libyaml openssl
 
 # Install rbenv
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
