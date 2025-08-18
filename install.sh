@@ -2,6 +2,9 @@ echo "Installing some stuff..."
 sudo pacman -S emacs
 chsh -s /bin/zsh
 
+# Install rbenv
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+
 # Emacs Prelude
 curl -L https://github.com/bbatsov/prelude/raw/master/utils/installer.sh | sh
 
