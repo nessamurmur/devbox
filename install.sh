@@ -1,5 +1,5 @@
 echo "Installing some stuff..."
-sudo pacman -S emacs
+sudo pacman -S emacs rbenv
 chsh -s /bin/zsh
 
 # Emacs Prelude
