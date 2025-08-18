@@ -1,4 +1,4 @@
-chsh -s /bin/zsh
+chsh -s /usr/bin/zsh
 
 echo "Installing some stuff..."
 sudo pacman -S emacs
