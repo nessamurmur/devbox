@@ -33,5 +33,3 @@ alias gitco="git checkout"
 alias ec="emacsclient"
 
 alias edit="emacsclient"
-
-alias fuck='eval $(thefuck $(fc -ln -1))'
